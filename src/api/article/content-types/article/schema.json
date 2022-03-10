@@ -4,7 +4,7 @@
   "info": {
     "singularName": "article",
     "pluralName": "articles",
-    "displayName": "Article",
+    "displayName": "Request",
     "description": ""
   },
   "options": {
@@ -12,25 +12,37 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "title": {
+    "city": {
       "type": "string"
     },
-    "content": {
-      "type": "richtext"
-    },
-    "date": {
-      "type": "date",
+    "fullName": {
+      "type": "string",
       "required": true
     },
-    "image": {
+    "phoneNumber": {
+      "type": "biginteger"
+    },
+    "identity": {
       "type": "media",
-      "multiple": false,
+      "multiple": true,
       "required": false,
       "allowedTypes": [
         "images",
         "files",
         "videos"
       ]
+    },
+    "email": {
+      "type": "email"
+    },
+    "description": {
+      "type": "richtext"
+    },
+    "order": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::order.order",
+      "inversedBy": "request"
     }
   }
 }

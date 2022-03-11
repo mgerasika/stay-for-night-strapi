@@ -10,22 +10,35 @@
   "options": {
     "draftAndPublish": true
   },
-  "pluginOptions": {},
+  "pluginOptions": {
+    "i18n": {
+      "localized": true
+    }
+  },
   "attributes": {
     "fullName": {
-      "type": "string"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "phoneNumber": {
-      "type": "biginteger"
+      "type": "biginteger",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     },
     "place": {
-      "type": "string"
-    },
-    "order": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "api::order.order",
-      "mappedBy": "volunteer"
+      "type": "string",
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      }
     }
   }
 }
